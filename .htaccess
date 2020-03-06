@@ -1,0 +1,7 @@
+AuthUserFile /home/pi/public_html/.htpasswd
+AuthName "Please Log In"
+AuthType Basic
+require valid-user
+Order allow,deny
+Allow from 127.0.0.1
+satisfy any

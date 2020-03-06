@@ -1,4 +1,5 @@
 videos/*
 !videos/Countdown_10s.mp4
-
+vorschau/*
+!vorschau/Countdown_10s.jpg
 
