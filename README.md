@@ -53,8 +53,3 @@ The start script should contain the following lines:
     kweb -KJC http://127.0.0.1/~pi/index.php
 
 
-## Examples
-
-<img src="images/pic001.png" width="400"> <img src="images/pic002.png" width="400">
-<img src="images/pic003.png" width="400"> <img src="images/pic004.png" width="400">
-<img src="images/pic005.png" width="400">
