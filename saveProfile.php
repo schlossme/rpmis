@@ -22,7 +22,7 @@ $file = $_GET['config'];
 echo '<div id="pageFrame">';
 
 // Headline including name (typically Museum name)
-echo "<div id=pageTop> Deleting File </div>";
+echo "<div id=pageTop> Saving File </div>";
 
 // Main frame (stolan from debug.php css because it will be expand by lines)
 echo '<div id=pageMain >';
@@ -31,15 +31,14 @@ echo '<div id=pageMain >';
 // Some debug information
 echo " <hr>";
 
-echo "<h2>Deleting File" . $file . " </h2>";
+echo "<h2>Saving File" . $file . " </h2>";
 
-if(!unlink("profiles/$file")) {
-  echo "<br><h2>Cannot delete File: ". $file." due to an error</h2>";
-}
-else {
-  echo "<br><h2>File: $file has been deleted successful!</h2>";
-}
 
+if ( $_POST['config'] ) {
+
+  $myco = put_ini_file($confAll, "profiles/". $_POST['config'], "true", "true");
+  
+}
 
 
 

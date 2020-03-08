@@ -7,7 +7,7 @@ include('functions.php');
 
 // Header information <header/><title/><body>
 // Incuding java script and css
-headerMyActionPHP();
+headerPHP();
 
 // Load main page after several seconds
 echo "<body onload=\"setTimeout(function(){window.location = 'index.php';},600)\" >";
@@ -16,8 +16,8 @@ echo "<body onload=\"setTimeout(function(){window.location = 'index.php';},600)\
 // read config.ini
 // $confAll = parse_ini_file("config.ini", TRUE);
 
-// Make a backup from thre current config.ini to config.bak
-$myco = put_ini_file($confAll, "profile/letztesProfil", "true", "true");
+// Make a backup from thre current config.ini
+//$myco = put_ini_file($confAll, "profiles/letztesProfil", "true", "true");
 
 // Store Default array from the edit.php form
 $confAll['Defaults']['Theme'] 	  	= $_POST['Theme'];
@@ -57,13 +57,6 @@ $confAll['Videos']['9'] = $_POST['VideoFile9'];
 
 // Save all the arrays to config.ini
 $myco = put_ini_file($confAll, "config.ini", "true", "true");
-
-if ( $_POST['Profile'] ) {
- 
-  $myco = put_ini_file($confAll, "profiles/". $_POST['Profile'], "true", "true");
-	
-}
-
 
 
 // Whole frame

@@ -1,7 +1,6 @@
 <?php
 //
 
-
 $startPage = "index.php";
 
 $ipAdress = $_SERVER['REMOTE_ADDR'];
@@ -22,10 +21,11 @@ $availableThemes = array("Grau", "Gruen", "Blau", "Gelb", "Tuerkis");
 $availableModes = array("Text", "Bilder");
 
 
-if(isset($_GET['config'])) { $configFile = "profiles/".$_GET['config']; }
+if(isset($_GET['config'])) { copy( "profiles/".$_GET['config'],"config.ini" ); }
 
-else                      { $configFile = "config.ini";   }
+sleep (1);
 
+$configFile = "config.ini";
 
 $confAll = parse_ini_file($configFile, TRUE);
 
@@ -53,8 +53,5 @@ $confDefaults   = $confAll['Defaults'];
  $LoopActive    = $confDefaults['LoopActive'];
 
 if(isset($_GET['File']))  { $videoFile = $_GET['File']; }
-
-
-
 
 ?>

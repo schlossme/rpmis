@@ -2,12 +2,13 @@
 
 // Include variable extracted from config.ini
 include('environment.php');
+
 // Incude all functions
 include('functions.php');
 
 // Header information <header/><title/><body>
 // Incuding java script and css
-headerEditPHP();
+headerPHP();
 
 
 // Whole frame
@@ -115,13 +116,14 @@ echo '<div id=input3>';
 
 echo '<fieldset><legend>Profilverwaltung</legend>';
 echo '<input size="20" style="font-size:12px;" type=text placeholder="Neue Profilname" name=Profile value=' . "'$ConfigFile'" . '>';
-//echo ' <input class=button type="submit" value="Speichern"> &nbsp; &nbsp;';
 
-dropDown ($availableProfiles, "Profile speicher","edit.php" );
+echo '<a href="saveProfile.php?config=todo"><span class="dropbtn">Profil speichern</span></a>';
 
 echo '&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;';
 
 dropDown ($availableProfiles, "Profile laden...","edit.php" );
+
+echo '&nbsp; &nbsp;';
 
 dropDown ($availableProfiles, "Profile Löschen","delProfile.php");
 

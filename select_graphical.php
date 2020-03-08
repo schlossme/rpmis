@@ -14,7 +14,7 @@ if ($LoopActive == "AN"  and $ipAdress == "127.0.0.1" ) {
 
 // Header information <header/><title/><body>
 // Incuding java script and css
-headerIndexPHP();
+headerPHP();
 
 // Whole frame
 echo '<div id="pageFrame">';

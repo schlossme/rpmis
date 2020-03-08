@@ -8,13 +8,8 @@ function play ( $Number ) {
 
     if($videoFile == "") { return 0; }
     if($ipAdress != "127.0.0.1") {
-        if($FullScreen == "AN") {
            $playVideo="<iframe src=leer.mp4 allow=autoplay style=display:none></iframe>
-                  <video class=full src=videos/$videoFile autoplay controls webkitExitFullScreen > </video>";
-        }else{
-           $playVideo="<iframe src=leer.mp4 allow=autoplay style=display:none></iframe>
-                  <video class=noneFull with=60% height=80% src=videos/$videoFile autoplay controls webkitExitFullScreen > </video>";
-        }
+                       <video class=noneFull with=60% height=80% src=videos/$videoFile autoplay controls webkitExitFullScreen > </video>";
     }else{
         if($FullScreen == "AN") {
             $playVideo="<iframe src=http://localhost:9192/dplay?url=%2Fhome%2Fpi%2Fpublic_html%2Fvideos%2F$videoFile&omxoptions=--win;0,0,1920,1080;stop width=0 height=0></iframe>";
@@ -45,7 +40,7 @@ function back ( $video ) {
 //   - the default from config.ini which has to be pre-selected
 //   - the name of the selection to send wich will become e.g. $_GET('Bild')
 function pullDown ($list, $fromConfig, $selectName) {
-    include('environment.php');
+    //include('environment.php');
 
 
     array_unshift($list, "");
@@ -63,20 +58,16 @@ function pullDown ($list, $fromConfig, $selectName) {
 // Dropdown menue fpr edit.php
 function dropDown ($List, $Text, $Url) {
 
-  echo '<div class="dropdown">
-  	<button class="dropbtn">'.$Text.'</botton>
-          <div class="dropdown-content">';
-
-  foreach($List AS $myFile) {
-    echo "<a href=$Url?config=$myFile>$myFile</a>";
-  }
-
-  echo '</div>
-          </div>';
+  echo '<div class="dropdown">';
+    echo '<span class="dropbtn">'.$Text.'</span>';
+    echo '<div class="dropdown-content">';
+      foreach($List AS $myFile) {
+         echo "<a href=$Url?config=$myFile>$myFile</a>";
+      }
+    echo '</div>';
+  echo '</div>';
 
 }
-
-
 
 
 // TODO:
@@ -120,7 +111,7 @@ function put_ini_file($config, $file, $has_section = false, $write_to_file = tru
 
 
 
-function headerVideoPHP () {
+function headerPHP () {
 
   echo " <html> <head>
   <title>Herzlich willkommen!</title>
@@ -130,68 +121,8 @@ function headerVideoPHP () {
   <meta name=description content=Hopfenmuseum Speikern>
   <meta name=keywords content=Hopfenmuseum, Speikern, Neunkirchen, Heimat und Geschichts Verein>
   <link rel=stylesheet href=default.css.php type=text/css>
-  <link rel=stylesheet href=public.css type=text/css>
   <script type='text/javascript' src='script.js'></script>
   </head> <body>";
-}
-
-function headerPicturePHP () {
-
-  echo " <html> <head>
-  <title>Herzlich willkommen!</title>
-  <meta http-equiv=Content-Language content=de>
-  <meta http-equiv=Content-Type content=text/html; charset=utf-8 />
-  <meta name=author content=schloss>
-  <meta name=description content=Hopfenmuseum Speikern>
-  <meta name=keywords content=Hopfenmuseum, Speikern, Neunkirchen, Heimat und Geschichts Verein>
-  <link rel=stylesheet href=default.css.php type=text/css>
-  </head> <body>";
-}
-
-function headerIndexPHP () {
-  echo "<head>
-  <title>Herzlich willkommen!</title>
-  <meta http-equiv=Content-Language content=de>
-  <meta http-equiv=Content-Type content=text/html; charset=utf-8 />
-  <meta name=author content=schloss@me.com>
-  <meta name=description content=Hopfenmuseum Speikern>
-  <meta name=keywords content=Hopfenmuseum, Speikern, Neunkirchen, Heimat und Geschichts Verein>
-  <link rel=stylesheet href=default.css.php type=text/css>
-  </head> <body>";
-
-}
-
-function headerEditPHP () {
-  echo "<head>
-  <title>Herzlich willkommen!</title>
-  <meta http-equiv=Content-Language content=de>
-  <meta http-equiv=Content-Type content=text/html; charset=utf-8 />
-  <meta name=author content=schloss@me.com>
-  <meta name=description content=Hopfenmuseum Speikern>
-  <meta name=keywords content=Hopfenmuseum, Speikern, Neunkirchen, Heimat und Geschichts Verein>
-  <link rel=stylesheet href=default.css.php type=text/css>
-  <link rel=stylesheet href=edit.css.php type=text/css>
-  </head> <body>";
-
-}
-
-
-
-
-
-
-function headerMyActionPHP () {
-
-  echo "<head>
-  <title>Herzlich willkommen!</title>
-  <meta http-equiv=Content-Language content=de>
-  <meta http-equiv=Content-Type content=text/html; charset=utf-8 />
-  <meta name=author content=schloss@me.com>
-  <meta name=description content=Hopfenmuseum Speikern>
-  <meta name=keywords content=Hopfenmuseum, Speikern, Neunkirchen, Heimat und Geschichts Verein>
-  <link rel=stylesheet href=default.css.php type=text/css>
-  </head>";
-
 }
 
 

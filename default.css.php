@@ -1,13 +1,13 @@
 <?php
 
+// Include variable extracted from config.ini
+include('environment.php');
+
 // Header information <header/><title/><body>
 // Incuding java script and css
 header('Content-type: text/css');
 
-// Include variable extracted from config.ini
-include('environment.php');
-
-
+//include 'select.css.php';
 
 // A group of colors for different themes
 if( $Theme == "Blau") {
@@ -56,9 +56,9 @@ if( $Theme == "Blau") {
 }
 
 // For a better overview css will be split into different files
-include 'video.css.php';
 include 'edit.css.php';
-include 'select.css.php';
+
+
 ?>
 
 
@@ -211,6 +211,64 @@ a {
 }
 
 
+
+/* video.php part
+/* ====================================================================================== */
+
+
+ #pageTopVideo {
+ 	height: 0.4em;
+ 	background-color: <?=$darkBG?>;
+   padding: 0.2em 1.2em 0.8em 1.2em;
+ 	margin: 0 0 0 0;
+ 	font-size: 2.3em;
+ 	font-style: italic;
+ 	font-weight: bold;
+ 	color: <?=$lightLetter?>;
+   border-radius: 15px 15px 0 0;
+ }
+
+ #pageMainVideo {
+   clear: both;
+   height: 39.5em;
+   background-color: <?=$lightBG?>;
+   padding: 0.5em 1em 1em 1em;
+   margin: 0 0 0 0;
+ }
+
+#pageBottomVideo {
+  text-align: right;
+  background-color: <?=$lightBG?>;
+  padding: 10em 2em 2em 1em;
+  margin: 0 0 0 0;
+  height: 1.5em;
+  border-radius: 0 0 15px 15px;
+}
+
+
+video.noneFull {
+  height: 45em;
+  display: block;
+  margin: 0 auto;
+  object-fit: fill;
+}
+
+
+video.full {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+
+.video-wrapper {position: absolute; padding-bottom: 56.25%; /* 16:9 */  padding-top: 25px;}
+.video-wrapper iframe {position: absolute; top: 0; left: 0; width: 1400px; height: 810px;}
+
+
+
 /* Designe of the buttons for choosing the video */
 /* ====================================================================================== */
 
@@ -319,3 +377,200 @@ a.hover {
   background: #404040; /* Fallback IE 6-8 */
   background-color: rgba(40, 40, 40, 0.7);
 }
+
+
+
+
+/* Edit part */
+/* ========================================================================= */
+
+
+ #infoEditRight {
+   float: right;
+   width: 55%;
+   text-align: left;
+ }
+
+
+ #infoEditLeft {
+   width: 45%;
+   text-align: left;
+   float: left;
+ }
+
+
+
+/* Section where the Save and chancel botton are */
+ #pageBottomEdit {
+   height: 2em;
+   text-align: left;
+   background-color: <?=$lightBG?>;
+   padding: 1em 2em 2em 1em;
+   margin: 0 0 0 0;
+   border-radius: 0 0 15px 15px;
+ }
+
+/* Size of the pulldown selection */
+select {
+    font-size: 1em;
+    height: 2em;
+}
+
+/* Radio button size */
+input[type=radio] {
+    width: 2em;
+}
+
+/* Video Title field */
+input.videoTitle {
+    height: 1.5em;
+    font-size: 1.5em;
+    background-color: <?=$lightBG?>;
+
+}
+
+
+/* Button (Save and Chancel) */
+.button {
+	background-color: <?=$darkBG?>;
+  border: none;
+	color: <?=$lightLetter?>;
+  text-align: center;
+  display: inline-block;
+  font-size: 1em;
+  cursor: pointer;
+  width: 8.5em;
+	height: 2em;
+	margin: 0 0 0 1em;
+	box-shadow: 0.2em 0.2em 0.1em <?=$shadow?>;
+	border-radius: 0.5em;
+
+}
+
+
+/* Top name (e.g. Hopfenmuseum Speikern) */
+ input.Name {
+   color: <?=$lightLetter?>;
+   border: 1;
+   border-style: groove;
+   border-color: <?=$darkBG?>;
+   padding: 0 0 0 0;
+   margin: 0 0 0.2em 0;
+   background-color: <?=$darkBG?>;
+   font-weight: bold;
+   font-size: 1.2em;
+ }
+
+/* Welcome section (e.g. Hopfenmuseum Speikern) */
+input.Welcome {
+  color: <?=$darkLetter?>;
+  border: 1;
+  border-style: groove;
+  border-color: <?=$lightBG?>;
+  background-color: <?=$lightBG?>;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+/* Info field */
+input.Betreff {
+  color: <?=$darkLetter?>;
+  border: 1;
+  border-style: groove;
+  border-color: <?=$lightBG?>;
+  background-color: <?=$lightBG?>;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+/* Help text */
+textarea.help {
+  color: <?=$lightLetter?>;
+  border: 1;
+  background-color: <?=$darkBG?>;
+  padding: 1em;
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+
+/* Line for each video */
+div.linkLineEdit {
+	height: 2em;
+	color: <?=$topcolor?>;
+	background-color: <?=$lightBG?>;
+	padding: 0.1em 0em 0.1em 0.4em;
+	margin: 1.3em 4em 0 1em;
+
+}
+
+
+/* Section Fullscreen and Loop */
+#inputLineOne {
+  display: -webkit-flex;
+  display: flex;
+}
+
+
+/* Section for Theme and Bilder */
+#input3 {
+  font-size: 1em;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+}
+
+fieldset {
+  height: 4em;
+
+}
+
+
+
+/* Section for Profiles */
+
+
+.dropbtn {
+  background-color: <?=$darkBG?>;
+  border: none;
+  color: <?=$lightLetter?>;
+  text-align: center;
+  display: inline-block;
+  font-size: 1em;
+  cursor: pointer;
+  width: 10em;
+  height: 1.5em;
+  padding: 4px 10px 4px 10px;
+  margin: 0 0 0 1em;
+//  box-shadow: 0.2em 0.2em 0.1em <?=$shadow?>;
+//  border-radius: 0.5em;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  text-align: left;
+  background-color: #f1f1f1;
+  min-width: 11.5em;
+  margin: 0 0 0 10px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 2px 2px;
+}
+
+
+.dropdown-content a {
+  color: black;
+  padding: 6px 2px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
