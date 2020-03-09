@@ -9,8 +9,17 @@ include('functions.php');
 // Incuding java script and css
 headerPHP();
 
-// Load main page after several seconds
-echo "<body onload=\"setTimeout(function(){window.location = 'index.php';},600)\" >";
+
+//if(isset($_POST['Profile'])) {
+  // Load main page after several seconds
+//  echo "<body onload=\"setTimeout(function(){window.location = 'edit.php';},60)\" >";
+  //header( "Location: edit.php" );
+//}else{
+  // Load main page after several seconds
+  echo "<body onload=\"setTimeout(function(){window.location = 'index.php';},60)\" >";
+  //header( "Location: index.php" );
+//}
+
 
 
 // read config.ini
@@ -71,7 +80,7 @@ echo '<div id=pageMain >';
 
 // Some debug information
 echo " <h3> New configuration stored to config.ini!</h3>";
-echo " <h3> (Backup can be find under: config.bak) </h3>";
+echo " <h3> (New profile is:".$_POST['Profile'].") </h3>";
 echo " <hr>";
 echo " <h3> Return value is: " . $myco . "</h3>";
 

@@ -72,7 +72,7 @@ include 'edit.css.php';
      text-align: center; /* Zentrierung für alte IEs */
      background-color: black;
      max-width: 1920px;
-     font-size: 110%
+     font-size: 105%
   }
 
   #pageFrame {
@@ -91,15 +91,15 @@ include 'edit.css.php';
   body {
      text-align: center; /* Zentrierung für alte IEs */
      background-color: white;
-     max-width: 1260px;
-     font-size: 60%
+     max-width: 1290px;
+     font-size: 57%
   }
 
   #pageFrame {
       text-align: left;  /* Inhalt wieder links wegen alten IEs */
       margin: 0 auto;    /* Zentrierung mitte */
       background-color: <?=$lightBG?>;
-      margin: 1.5em 2em 2em 2em;
+      margin: 1.5em 1em 1.5em 1em;
       border-radius: 15px 15px 15px 15px;
   }
 
@@ -110,10 +110,6 @@ include 'edit.css.php';
 
 /* Main frames */
 /* ====================================================================================== */
-
-
-
-
 
 #pageTop {
 	height: 1em;
@@ -137,7 +133,7 @@ include 'edit.css.php';
 
 #pageMain {
   clear: both;
-  height: 33.5em;
+  height: 43em;
   text-align: left;
   background-color: <?=$lightBG?>;
   padding: 0.5em 1em 1em 1em;
@@ -230,7 +226,7 @@ a {
 
  #pageMainVideo {
    clear: both;
-   height: 39.5em;
+   height: 49em;
    background-color: <?=$lightBG?>;
    padding: 0.5em 1em 1em 1em;
    margin: 0 0 0 0;
@@ -247,7 +243,7 @@ a {
 
 
 video.noneFull {
-  height: 45em;
+  height: 55em;
   display: block;
   margin: 0 auto;
   object-fit: fill;
@@ -262,7 +258,6 @@ video.full {
     height: 100%;
     object-fit: fill;
 }
-
 
 .video-wrapper {position: absolute; padding-bottom: 56.25%; /* 16:9 */  padding-top: 25px;}
 .video-wrapper iframe {position: absolute; top: 0; left: 0; width: 1400px; height: 810px;}
@@ -309,9 +304,10 @@ div.linkLine {
 
 }
 
+
+
 /* General link design */
 /* ====================================================================================== */
-
 
 a.null {
 	text-decoration: none;
@@ -355,23 +351,24 @@ a.hover {
 .bild_beschriftung img {
   border-radius: 0.5em;
   box-shadow: 0.4em 0.4em 0.1em <?=$shadow?>;
-  margin: 20px 30px 20px 30px;
-  width: 18em;
+  margin: 40px 30px 20px 30px;
+  width: 21em;
+  height: 14.5em;
 }
 
 .bild_beschriftung span {
   position: absolute;
-  margin: 20px 30px 20px 30px;
+  margin: 40px 30px 20px 30px;
   padding-top: 10px;
   bottom: 0;
   left: 0;
-  width: 18em;
+  width: 16.2em;
+  height: 2.8em;
   color: #fff;
   text-align: center;
   vertical-align: middle;
-  height: 3.4em;
   line-height: 1.3em;
-  font-size: 1em;
+  font-size: 1.3em;
   border-radius: 0 0 0.5em 0.5em;
   border-top: 1px solid #ababab;;
   background: #404040; /* Fallback IE 6-8 */
@@ -383,7 +380,6 @@ a.hover {
 
 /* Edit part */
 /* ========================================================================= */
-
 
  #infoEditRight {
    float: right;
@@ -397,7 +393,6 @@ a.hover {
    text-align: left;
    float: left;
  }
-
 
 
 /* Section where the Save and chancel botton are */
@@ -525,9 +520,8 @@ fieldset {
 }
 
 
-
 /* Section for Profiles */
-
+/* ========================================================================= */
 
 .dropbtn {
   background-color: <?=$darkBG?>;

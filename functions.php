@@ -121,8 +121,22 @@ function headerPHP () {
   <meta name=description content=Hopfenmuseum Speikern>
   <meta name=keywords content=Hopfenmuseum, Speikern, Neunkirchen, Heimat und Geschichts Verein>
   <link rel=stylesheet href=default.css.php type=text/css>
-  <script type='text/javascript' src='script.js'></script>
   </head> <body>";
+}
+
+
+function headerVideoPHP () {
+
+  echo " <html> <head>
+  <title>Herzlich willkommen!</title>
+  <meta http-equiv=Content-Language content=de>
+  <meta http-equiv=Content-Type content=text/html; charset=utf-8 />
+  <meta name=author content=schloss>
+  <meta name=description content=Hopfenmuseum Speikern>
+  <meta name=keywords content=Hopfenmuseum, Speikern, Neunkirchen, Heimat und Geschichts Verein>
+  <link rel=stylesheet href=default.css.php type=text/css>
+  <script type='text/javascript' src='script.js'></script>
+  </head>";
 }
 
 

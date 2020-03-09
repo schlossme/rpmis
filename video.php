@@ -7,7 +7,7 @@ include('functions.php');
 
 // Header information <header/><title/><body>
 // Incuding java script and css
-headerPHP();
+headerVideoPHP();
 
 // Whole frame
 echo '<div id="pageFrame">';
