@@ -1,2 +1,0 @@
-rsync -azv --delete --exclude config.ini --exclude "*.swp" --exclude "*.vim" --exclude .git/  . pi@192.168.2.68:/home/pi/public_html/
-
