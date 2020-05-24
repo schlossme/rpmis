@@ -101,12 +101,10 @@ function put_ini_file($config, $file, $has_section = false, $write_to_file = tru
 
  if($write_to_file && strlen($fileContent)) {
 	return file_put_contents($file, $fileContent, LOCK_EX); }
-
  else {
-	return $fileContent;
+  return $fileContent;
  }
-
- }
+}
 
 
 

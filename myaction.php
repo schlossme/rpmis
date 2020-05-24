@@ -10,23 +10,15 @@ include('functions.php');
 headerPHP();
 
 
-//if(isset($_POST['Profile'])) {
-  // Load main page after several seconds
-//  echo "<body onload=\"setTimeout(function(){window.location = 'edit.php';},60)\" >";
-  //header( "Location: edit.php" );
-//}else{
-  // Load main page after several seconds
-  echo "<body onload=\"setTimeout(function(){window.location = 'index.php';},60)\" >";
-  //header( "Location: index.php" );
-//}
+if($_POST['Profile']) {
+  echo "<body onload=\"setTimeout(function(){window.location = 'edit.php';},1)\" >";
+}
 
 
+if($_POST['StoreAll']) {
+  echo "<body onload=\"setTimeout(function(){window.location = 'index.php';},1)\" >";
+}
 
-// read config.ini
-// $confAll = parse_ini_file("config.ini", TRUE);
-
-// Make a backup from thre current config.ini
-//$myco = put_ini_file($confAll, "profiles/letztesProfil", "true", "true");
 
 // Store Default array from the edit.php form
 $confAll['Defaults']['Theme'] 	  	= $_POST['Theme'];
@@ -68,6 +60,11 @@ $confAll['Videos']['9'] = $_POST['VideoFile9'];
 $myco = put_ini_file($confAll, "config.ini", "true", "true");
 
 
+if(isset($_POST['newProfile'])) {
+  $saveNewProfile = 'profiles/' . $_POST[newProfile] ;
+  $myco = put_ini_file($confAll, $saveNewProfile, "true", "true");
+}
+
 // Whole frame
 echo '<div id="pageFrame">';
 
@@ -79,8 +76,8 @@ echo '<div id=pageMain >';
 
 
 // Some debug information
-echo " <h3> New configuration stored to config.ini!</h3>";
-echo " <h3> (New profile is:".$_POST['Profile'].") </h3>";
+echo " <h3> New configuration stored!</h3>";
+echo " <h3> (New profile is:" . $saveNewProfile .") </h3>";
 echo " <hr>";
 echo " <h3> Return value is: " . $myco . "</h3>";
 

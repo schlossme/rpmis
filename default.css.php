@@ -72,7 +72,7 @@ include 'edit.css.php';
      text-align: center; /* Zentrierung für alte IEs */
      background-color: black;
      max-width: 1920px;
-     font-size: 105%
+     font-size: 95%
   }
 
   #pageFrame {
@@ -394,10 +394,20 @@ a.hover {
    float: left;
  }
 
+#pageMainEdit {
+  clear: both;
+  height: 40em;
+  text-align: left;
+  background-color: <?=$lightBG?>;
+  padding: 0.5em 1em 1em 1em;
+  margin: 0 0 0 0;
+}
+
+
 
 /* Section where the Save and chancel botton are */
  #pageBottomEdit {
-   height: 2em;
+   height: 1.5em;
    text-align: left;
    background-color: <?=$lightBG?>;
    padding: 1em 2em 2em 1em;
@@ -518,6 +528,11 @@ fieldset {
   height: 4em;
 
 }
+
+.inputProf {
+  font-size: 1.4em;
+}
+
 
 
 /* Section for Profiles */

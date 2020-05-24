@@ -40,10 +40,10 @@ echo "<span id=infoEditLeft>";
 echo '<input class=Welcome type=text name=Willkommen size=15 value=' . "'$Willkommen'" . ' >';
 
 // Text field for info section
-echo '<div class=text><input class=Betreff type=text name=Betreff size=66 value=' . "'$Betreff'" . ' ></div> <br>';
+echo '<div class=text><input class=Betreff type=text name=Betreff size=60 value=' . "'$Betreff'" . ' ></div> <br>';
 
 // Text field for Help frame (can be more then one line)
-echo '<textarea class=help name=HelpText cols=60 rows=2>' . "$HelpText" . '</textarea> &nbsp; &nbsp;';
+echo '<textarea class=help name=HelpText cols=50 rows=2>' . "$HelpText" . '</textarea> &nbsp; &nbsp;';
 
 // Close infoLeft
 echo "</span>";
@@ -91,7 +91,7 @@ echo '&nbsp;</fieldset>';
 echo '</div>';
 
 echo '<div>';
-echo '<fieldset><legend>Modus</legend>';
+echo '<fieldset><legend>Modus*</legend>';
   pullDown($availableModes, $Mode, "Mode");
 echo '&nbsp; </fieldset>';
 echo '</div>';
@@ -115,11 +115,12 @@ echo '<div id=input3>';
 
 
 echo '<fieldset><legend>Profilverwaltung</legend>';
-echo '<input size="20" style="font-size:12px;" type=text placeholder="Neue Profilname" name=Profile value=' . "'$ConfigFile'" . '>';
+echo '<input size="18" class=inputProf type=text placeholder="Neue Profilname" name="newProfile" >';
 
-echo '<a href="saveProfile.php?config=todo"><span class="dropbtn">Profil speichern</span></a>';
+echo ' <input class=button type="submit" value=" Profil Speichern " name="Profile"> ';
 
-echo '&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;';
+
+echo '&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;';
 
 dropDown ($availableProfiles, "Profile laden...","edit.php" );
 
@@ -139,7 +140,7 @@ echo "</span>";
 echo "</div>";
 
 // Main frame showing all videos
-echo '<div id=pageMain>';
+echo '<div id=pageMainEdit>';
 
 $i=1;
 foreach($confTitle AS $title) {
@@ -158,7 +159,10 @@ foreach($confTitle AS $title) {
     if($i == $Loop) {$selected="checked=\"checked\"";}else{$selected=""; }
     radioButton(" ", "Loop", $selected, $i );
 
+    if($i == 9) { echo " <span style=\"font-size:small;\"> *ACHTUNG: Im Modus \" Bilder\" können nur 8 Videos verwendet werden!</span>"; }
+    
     echo '</div>';
+    
     $i++;
 }
 
@@ -172,7 +176,7 @@ echo '<div id=pageBottomEdit>';
 echo '&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ';
 
 
-echo ' <input class=button type="submit" value="Speichern"> ';
+echo ' <input class=button type="submit" value="Speichern" name="StoreAll"> ';
 
 
 echo ' <input class="button" type="button" onclick="window.location.replace('. "'$startPage'" . ')" value="Cancel"> &nbsp; ';
