@@ -54,5 +54,5 @@ The start script should contain the following lines:
 
 ## Examples
 
-[Main Menue](examples/screenshot01.png =250x)
+<img src="examples/screenshot01.png alt="Example 01" width="200"/>
 
