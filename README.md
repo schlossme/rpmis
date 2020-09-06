@@ -2,7 +2,7 @@
 
 ## Basic concept
 A web based info screen (running in kiosk mode) showing and playing a collection of videos.
-Webserver and browser are run both on a Raspberry Pi using a lightweight broswer and video player (kweb, omxplayer).
+Webserver and browser are run both on a Raspberry Pi using the lightweight browser and video player (kweb, omxplayer).
 
 
 ## Background and Motivation
@@ -21,7 +21,7 @@ Push buttons should be used for selecting them.
 * External accessible for editing the settings via a web form site.
 * Local editing of the page is not possible (only via external access)
 * Themes for different color groups  
-* Fullscreen mode
+* Fullscreen mode (text or icon main menue)
 * Loop mode
 
 ## Prerequisite
