@@ -52,4 +52,7 @@ The start script should contain the following lines:
     bgstart_ytdl_server.sh -t=myremote &
     kweb -KJC http://127.0.0.1/~pi/index.php
 
+## Examples
+
+![](examples/screenshot01.png =250x)
 
