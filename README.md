@@ -54,5 +54,5 @@ The start script should contain the following lines:
 
 ## Examples
 
-![](examples/screenshot01.png =250x)
+[Main Menue](examples/screenshot01.png =250x)
 
