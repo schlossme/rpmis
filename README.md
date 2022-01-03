@@ -54,5 +54,5 @@ The start script should contain the following lines:
 
 ## Examples
 
-<img src="https://github.com/schlossme/rpmis/blob/master/examples/screenshot01.png alt="Example 01" width="200"/>
+![Example1](examples/screenshot01.png)
 
