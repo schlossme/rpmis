@@ -10,7 +10,7 @@ Webserver and browser are run both on a Raspberry Pi using the lightweight brows
 ## Background and Motivation
 The original project was created for the german Hopfenmuseum in Speikern, Bavaria.  
 
-http://www.heimat-geschichtsverein.de/hopfenscheune.htm
+http://www.heimat-geschichtsverein.de
 
 The motivation was, to have a cheep but reliable **Standing Desk** for watching videos.  
 Push buttons should be used for selecting them.
