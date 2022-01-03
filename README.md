@@ -1,5 +1,7 @@
 # Raspberry Pi - Museum Info Screen
 
+![Main page with preview picture](examples/screenshot01.png)
+
 ## Basic concept
 A web based info screen (running in kiosk mode) showing and playing a collection of videos.
 Webserver and browser are run both on a Raspberry Pi using the lightweight browser and video player (kweb, omxplayer).
@@ -52,7 +54,12 @@ The start script should contain the following lines:
     bgstart_ytdl_server.sh -t=myremote &
     kweb -KJC http://127.0.0.1/~pi/index.php
 
-## Examples
+## Other Examples
 
-![Example1](examples/screenshot01.png)
+
+![Main page without preview pictures](examples/screenshot02.png)
+
+![embedded video view](examples/screenshot03.png)
+
+![Edit page](examples/screenshot04.png)
 
