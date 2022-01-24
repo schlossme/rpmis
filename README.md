@@ -27,7 +27,7 @@ Push buttons should be used for selecting them.
 * Loop mode
 
 ## Prerequisite
-Minimum requirement is a running apache2, php5 , kweb and omxplayer  
+Minimum requirement is a Raspery 4 with a running Rapian and installed apache2, php5 , kweb and omxplayer  
 (see: http://steinerdatenbank.de/software/kweb-1.7.9.8.tar.gz)
 Apache2 has to be configured for using public_html of user pi.
 
