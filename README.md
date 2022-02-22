@@ -4,7 +4,7 @@
 
 ## Basic concept
 A web based info screen (running in kiosk mode) showing and playing a collection of videos.
-Webserver and browser are run both on a Raspberry Pi using the lightweight browser and video player (kweb, omxplayer).
+Webserver and browser are runing both on a Raspberry Pi using the lightweight browser and video player (kweb, omxplayer).
 
 
 ## Background and Motivation

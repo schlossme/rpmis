@@ -1,6 +1,7 @@
 videos/*
 !videos/Countdown_10s.mp4
-vorschau/*
-!vorschau/Countdown_10s.jpg
+!videos/images
+!videos/vorschau
+!videos/profiles
 .DS_Store
 
