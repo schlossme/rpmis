@@ -53,7 +53,7 @@ echo "</span>";
 echo "<span id=infoRight>";
 
 // Show picture
-echo "<div class=infoPicture><img class=infoPicture src=images/$Bild > </div>";
+echo "<div class=infoPicture><img class=infoPicture src=videos/images/$Bild > </div>";
 
 // Close infoRight
 echo "</span>";

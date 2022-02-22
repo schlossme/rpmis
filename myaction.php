@@ -61,7 +61,7 @@ $myco = put_ini_file($confAll, "config.ini", "true", "true");
 
 
 if(isset($_POST['newProfile'])) {
-  $saveNewProfile = 'profiles/' . $_POST[newProfile] ;
+  $saveNewProfile = 'videos/profiles/' . $_POST[newProfile] ;
   $myco = put_ini_file($confAll, $saveNewProfile, "true", "true");
 }
 

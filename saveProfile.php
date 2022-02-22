@@ -36,7 +36,7 @@ echo "<h2>Saving File" . $file . " </h2>";
 
 if ( $_POST['config'] ) {
 
-  $myco = put_ini_file($confAll, "profiles/". $_POST['config'], "true", "true");
+  $myco = put_ini_file($confAll, "videos/profiles/". $_POST['config'], "true", "true");
   
 }
 

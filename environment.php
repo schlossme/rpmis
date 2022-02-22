@@ -9,10 +9,10 @@ $ipAdress = $_SERVER['REMOTE_ADDR'];
 $availableVideos = array_diff(scandir('videos'), array('.', '..'));
 
 // Available pictures
-$availablePictures = array_diff(scandir('images'), array('.', '..'));
+$availablePictures = array_diff(scandir('videos/images'), array('.', '..'));
 
 // Available profiles
-$availableProfiles = array_diff(scandir('profiles'), array('.', '..'));
+$availableProfiles = array_diff(scandir('videos/profiles'), array('.', '..'));
 
 // Available themes
 $availableThemes = array("Grau", "Gruen", "Blau", "Gelb", "Tuerkis");
@@ -21,7 +21,7 @@ $availableThemes = array("Grau", "Gruen", "Blau", "Gelb", "Tuerkis");
 $availableModes = array("Text", "Bilder");
 
 
-if(isset($_GET['config'])) { copy( "profiles/".$_GET['config'],"config.ini" ); }
+if(isset($_GET['config'])) { copy( "videos/profiles/".$_GET['config'],"config.ini" ); }
 
 sleep (1);
 

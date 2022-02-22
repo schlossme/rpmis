@@ -33,7 +33,7 @@ echo " <hr>";
 
 echo "<h2>Deleting File" . $file . " </h2>";
 
-if(!unlink("profiles/$file")) {
+if(!unlink("videos/profiles/$file")) {
   echo "<br><h2>Cannot delete File: ". $file." due to an error</h2>";
 }
 else {

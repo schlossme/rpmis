@@ -176,10 +176,10 @@ echo '<div id=pageBottomEdit>';
 echo '&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ';
 
 
-echo ' <input class=button type="submit" value="Speichern" name="StoreAll"> ';
+echo ' <input class=button type="submit" value="geänd. Profile" name="StoreAll"> ';
 
 
-echo ' <input class="button" type="button" onclick="window.location.replace('. "'$startPage'" . ')" value="Cancel"> &nbsp; ';
+echo ' <input class="button" type="button" onclick="window.location.replace('. "'$startPage'" . ')" value="nur Profile"> &nbsp; ';
 
 // Buttom frame close
 echo '</div>';

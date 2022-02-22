@@ -53,7 +53,7 @@ echo "</span>";
 echo "<span id=infoRight>";
 
 // Show picture
-echo "<div class=infoPicture><img class=infoPicture src=images/$Bild > </div>";
+echo "<div class=infoPicture><img class=infoPicture src=videos/images/$Bild > </div>";
 
 // Close infoRight
 echo "</span>";
@@ -77,7 +77,7 @@ foreach($confTitle AS $title) {
     $imageFile = preg_replace('"\.(mov|mp4)$"', '.jpg', $videoFile);
 
     echo "<a href=video.php?video=".$i.">
-              <span class=bild_beschriftung><img src=vorschau/".$imageFile.">
+              <span class=bild_beschriftung><img src=videos/vorschau/".$imageFile.">
                 <span>".$title."</span>
               </span>
             </a>";
