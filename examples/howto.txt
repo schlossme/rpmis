@@ -1,0 +1,4 @@
+DD examples after shrinking the 15G partition
+
+# dd of=/dev/mmcblk0 if=hgv20220420.img bs=1M status=progress
+# dd if=/dev/mmcblk0 of=hgv20220420.img bs=1M count=7500 status=progress
